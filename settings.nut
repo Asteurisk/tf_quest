@@ -14,7 +14,7 @@
 local scriptSettings =
 {
     //Quest Settings
-    maxQuestsPerPlayer = 10,                         //A player can have this many quests active at once
+    maxQuestsPerPlayer = 1,                         //A player can have this many quests active at once
     savePlayerQuestsDir = "tf_quest/savedata/"      //Directory where player quest progress is saved
     enableQuestSaves = true,                        //Enable or disable Quest progress saving
     enableQuestUI = true,                           //Enable or disable Quest UI (HUD & Chat)
@@ -29,7 +29,7 @@ local scriptSettings =
     commandDelimeter = "!"                          //Command prefix
     commandBlacklist = []                           //Specific commands to disable for all players
     //Debug Settings
-    debugLevel = 6                                  //Specify what TF_Quest prints to console/chat (see "include/debug.nut")
+    debugLevel = 4                                  //Specify what TF_Quest prints to console/chat (see "include/debug.nut")
 }                                                       //Set value to -1 to disable TF_Quest from printing to console/chat
 
 //Functions
