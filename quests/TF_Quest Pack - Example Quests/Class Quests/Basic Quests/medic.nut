@@ -11,11 +11,11 @@ local quest =
 		[
 			{
 				objective_name = "Zis might sting"
-				objective_desc = "Assist killing enemies"
+				objective_desc = "Get points as Medic"
 				objective_points = 0
-				objective_award = 1
+				objective_award = 2
 				objective_target = 100
-				objective_type = "KILL_PLAYER_ASSIST"
+				objective_type = "GET_POINTS"
 				objective_flags = [{flag_type = "PLAYER_CLASS", flag_value = [2, 5]}] //Quester must be Medic
 			},
 			{

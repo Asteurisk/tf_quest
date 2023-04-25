@@ -11,11 +11,11 @@ local quest =
 		[
 			{
 				objective_name = "Hidden in Plain Sight"
-				objective_desc = "Kill enemies"
+				objective_desc = "Get points as Spy"
 				objective_points = 0
-				objective_award = 5
+				objective_award = 2
 				objective_target = 100
-				objective_type = "KILL_PLAYER"
+				objective_type = "GET_POINTS"
 				objective_flags = [{flag_type = "PLAYER_CLASS", flag_value = [2, 8]}] //Quester must be Spy
 			},
 			{

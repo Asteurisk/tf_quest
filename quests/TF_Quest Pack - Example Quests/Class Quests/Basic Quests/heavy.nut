@@ -11,11 +11,11 @@ local quest =
 		[
 			{
 				objective_name = "Ya-da-da-da-da-da-da-da!"
-				objective_desc = "Kill enemies"
+				objective_desc = "Get points as Heavy"
 				objective_points = 0
-				objective_award = 1
+				objective_award = 2
 				objective_target = 100
-				objective_type = "KILL_PLAYER"
+				objective_type = "GET_POINTS"
 				objective_flags = [{flag_type = "PLAYER_CLASS", flag_value = [2, 6]}] //Quester must be Heavy
 			},
 			{

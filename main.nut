@@ -38,6 +38,7 @@ IncludeScript("/tf_quest/include/chatCommands.nut")
 //	- Player Disconnected
 //	- Player Sent Chat
 //	- Player Spawned
+//	- Player Score Changed
 // ***********************************************************
 
 // -----------------------------------------------------------
@@ -199,6 +200,56 @@ function OnGameEvent_player_spawn(params)
 	else
 	{
 		DisplayQuestInfo(hPlayer)
+	}
+}
+
+__CollectEventCallbacks(this, "OnGameEvent_", "GameEventCallbacks", RegisterScriptGameEventListener)
+
+// -----------------------------------------------------------
+//	Event: Player score changed
+//
+// -----------------------------------------------------------
+function OnGameEvent_player_score_changed(params)
+{
+	//Handles
+	local hPlayer
+	local score
+
+	//Tracker Players
+	local player
+
+	//Populate variables
+	if ("player" in params)
+	{
+		hPlayer = PlayerInstanceFromIndex(params.player)
+		player = FindPlayer(hPlayer)
+	}
+	if ("delta" in params)
+	{
+		score = params.delta
+	}
+
+	dPrint(6, hPlayer + " (hPlayer), " + score + " (score), " + player + " (player)")
+
+	//Check Player's Quests
+	if (player != null)
+	{
+		local objectiveTypes = ["GET_POINTS"]
+		local objectiveParams =
+		{
+			PLAYER_SELF = hPlayer
+		}
+
+		//Set points
+		local deltaScore
+		if (score != null)
+			deltaScore = score
+		else
+			deltaScore = 1
+
+		dPrint(6, "Going to check!!!")
+		//Check if Objective should advance for Player
+		CheckObjectiveForPlayer(hPlayer, objectiveTypes, objectiveParams, deltaScore)
 	}
 }
 

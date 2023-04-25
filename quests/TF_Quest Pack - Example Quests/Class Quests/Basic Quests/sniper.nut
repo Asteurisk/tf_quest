@@ -11,11 +11,11 @@ local quest =
 		[
 			{
 				objective_name = "Boom."
-				objective_desc = "Headshot enemies"
+				objective_desc = "Get points as Sniper"
 				objective_points = 0
-				objective_award = 5
+				objective_award = 2
 				objective_target = 100
-				objective_type = "KILL_PLAYER"
+				objective_type = "GET_POINTS"
 				objective_flags = [{flag_type = "PLAYER_CLASS", flag_value = [2, 2]} {flag_type = "DAMAGE_TYPE", flag_value = 1}] //Quester must be Sniper; Damage done must be Headshot
 			},
 			{

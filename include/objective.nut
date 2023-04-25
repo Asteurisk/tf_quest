@@ -16,6 +16,7 @@
   //Objective Types
 local objectiveTypes =
 [
+	"GET_POINTS"
 	"KILL_PLAYER",
 	"KILL_PLAYER_ASSIST",
 	"KILL_ENVIRONMENTAL",
