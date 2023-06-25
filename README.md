@@ -120,6 +120,7 @@ In TF_Quest, a quest can run in one of two modes, either Contracker or Quest mod
 
 | Event | Description |
 |-------|-------------|
+| GET_POINTS | A player has gained a point |
 | KILL_PLAYER | A player has killed another player |
 | KILL_PLAYER_ASSIST | A player has assisted in killing another player |
 | KILL_ENVIRONMENTAL | A player caused another player to die to the environment |
